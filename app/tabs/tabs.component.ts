@@ -1,14 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { TabComponent } from './tab/tab.component';
 
 @Component({
   selector: 'tabs',
   templateUrl: './tabs.component.html',
   styleUrls: [ ]
 })
-export class TabsComponent implements OnInit {
+export class TabsComponent {
 
-  // @ViewChildren(AlertComponent) alerts: QueryList<AlertComponent>
   constructor(){}
 
-  ngOnInit() {}
 }

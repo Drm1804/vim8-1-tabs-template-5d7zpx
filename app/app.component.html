@@ -9,12 +9,14 @@
 
 <tabs>
   <tab *ngFor="let tab of tabs">
-    <tab-title>
+    <tab-title [isActive]="isActive(tab)" [id]="tab" (onClick)="clickTab($event)">
       Tab <b>{{ tab }}</b> title
     </tab-title>
-    <tab-content>
+    <tab-content *ifLoad="isActive(tab)">
       Tab <b>{{ tab }}</b> content
       <test [tab]="tab"></test>
     </tab-content>
   </tab>
 </tabs>
+
+ <!-- *ngIf="isActive(tab)" -->
